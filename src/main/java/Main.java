@@ -52,6 +52,7 @@ public class Main {
                 } else {
                     System.out.println("Доктор: Що ще ви любите?");
                 }
+                continue;
             } else {
                 int generationNumber = (int) (1 + Math.random() * 5);
                 switch (generationNumber){
