@@ -18,7 +18,7 @@ public class Main {
             } else if (message.toLowerCase(Locale.ROOT).contains("хворію")) {
                 System.out.println("Доктор: Давайте подивимость що з цим можно зробити. Що вас турбує?");
                 continue;
-            } else if (message.toLowerCase(Locale.ROOT).contains("болить")) {
+            } else if (message.toLowerCase(Locale.ROOT).contains("болит")) {
                 if (message.toLowerCase(Locale.ROOT).contains("горло")) {
                     System.out.println("Доктор: Вам потрібен спрей від горла.");
                 } else if (message.toLowerCase(Locale.ROOT).contains("очі")) {
@@ -44,8 +44,34 @@ public class Main {
                     System.out.println("Доктор: це дуже погано. Роскажіть детальніше.");
                 }
                 continue;
+            } else if (message.toLowerCase(Locale.ROOT).contains("люблю")) {
+                if (message.toLowerCase(Locale.ROOT).contains("яблука")){
+                    System.out.println("Доктор: Я теж люблю фрукти.");
+                } else if (message.toLowerCase(Locale.ROOT).contains("ком'ютери")){
+                    System.out.println("Доктор: Ви маєте здібності до техніки.");
+                } else {
+                    System.out.println("Доктор: Що ще ви любите?");
+                }
+            } else {
+                int generationNumber = (int) (1 + Math.random() * 5);
+                switch (generationNumber){
+                    case 1:
+                        System.out.println("Доктор: Я Вас не дуже розумію.");
+                        break;
+                    case 2:
+                        System.out.println("Доктор: Давайте поговоримо про щось інше.");
+                        break;
+                    case 3:
+                        System.out.println("Доктор: Сумнівно.");
+                        break;
+                    case 4:
+                        System.out.println("Доктор: Треба подумати.");
+                        break;
+                    case 5:
+                        System.out.println("Доктор: Дуже цікаво. Роскажіть детальніше.");
+                        break;
+                }
             }
-
         }
     }
 }
